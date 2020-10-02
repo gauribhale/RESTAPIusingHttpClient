@@ -1,0 +1,6 @@
+package com.qa.data;
+
+public class Users {
+
+	String name,job;
+}

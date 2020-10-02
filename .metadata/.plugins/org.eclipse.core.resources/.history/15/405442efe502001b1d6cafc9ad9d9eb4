@@ -1,0 +1,87 @@
+package com.qa.tests;
+
+import java.io.IOException;
+
+import java.util.HashMap;
+
+import org.apache.http.Header;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONObject;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.qa.client.RESTClient;
+import com.qa.util.TestUtil;
+
+import Base.TestBase;
+
+public class GETAPITest extends TestBase {
+	TestBase testbase;
+	RESTClient client;
+	String url;
+	String apiUrl;
+	CloseableHttpResponse httpResponse;
+
+	@BeforeMethod
+	public void setUp() throws ClientProtocolException, IOException {
+		testbase = new TestBase();
+		url = prop.getProperty("URL");
+		apiUrl = prop.getProperty("serviceURL");
+
+	}
+
+	@Test
+	public void testGETMethod() throws ClientProtocolException, IOException {
+		client = new RESTClient();
+		httpResponse = client.get(url + apiUrl);
+
+		// 1. to get status code
+		int statusCode = httpResponse.getStatusLine().getStatusCode();
+		System.out.println("status code: " + statusCode);
+		Assert.assertEquals(RESPONSE_CODE_200, statusCode, "Status code is not 200");
+
+		// 2. to get response in string format
+		// getEntity will get entire response
+		String responseString = EntityUtils.toString(httpResponse.getEntity(), "UTF-8");
+		// to convert response string into json object
+		JSONObject responseJSON = new JSONObject(responseString);
+		System.out.println("Response: " + responseJSON);
+
+		// Single value assertion:
+		// per_page:
+		String per_page = TestUtil.getValueByJSONPath(responseJSON, "/per_page");
+		System.out.println("value of per page: " + per_page);
+		Assert.assertEquals(Integer.parseInt(per_page), 6);
+
+		// get value from JSON Array:
+		String lastName = TestUtil.getValueByJSONPath(responseJSON, "/data[1]/last_name");
+		String firstName = TestUtil.getValueByJSONPath(responseJSON, "/data[1]/first_name");
+		String id = TestUtil.getValueByJSONPath(responseJSON, "/data[1]/id");
+		String avatar = TestUtil.getValueByJSONPath(responseJSON, "/data[1]/avatar");
+
+		System.out.println("Last name: " + lastName);
+		System.out.println("First name: " + firstName);
+		System.out.println("id: " + id);
+		System.out.println("avatar: " + avatar);
+
+		// 3. to get headers and store in array
+		Header[] headersArray = httpResponse.getAllHeaders();
+
+		// 4. to store headers in key value pair
+		HashMap<String, String> allHeaders = new HashMap<String, String>();
+		for (Header header : headersArray) {
+			allHeaders.put(header.getName(), header.getValue());
+		}
+		
+		
+		System.out.println("Headers are: " + allHeaders);
+		Assert.assertTrue(allHeaders.containsValue("chunke"), "incorrect header value");
+		
+		
+		
+	}
+
+}

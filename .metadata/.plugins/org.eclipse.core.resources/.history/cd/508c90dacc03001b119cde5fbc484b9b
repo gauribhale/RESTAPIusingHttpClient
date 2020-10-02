@@ -1,0 +1,35 @@
+package com.qa.tests;
+
+import java.io.IOException;
+
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.qa.client.RESTClient;
+
+import Base.TestBase;
+
+public class POSTAPITest extends TestBase {
+
+	TestBase testbase;
+	RESTClient client;
+	String url;
+	String apiUrl;
+	CloseableHttpResponse httpResponse;
+
+	@BeforeMethod
+	public void setUp() throws ClientProtocolException, IOException {
+		testbase = new TestBase();
+		url = prop.getProperty("URL");
+		apiUrl = prop.getProperty("serviceURL");
+
+	}
+
+	@Test
+	public void testPOSTMethod() {
+		client = new RESTClient();
+
+	}
+}

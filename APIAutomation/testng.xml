@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="APIAutomation" verbose="1" parallel="tests"
+	thread-count="1" configfailurepolicy="continue">
+	
+	<test name="APIAutomation Test" annotations="JDK"
+		preserve-order="true">
+		<packages>
+			<package name="com.qa.tests"/>
+		</packages>
+	</test>
+</suite> <!-- Suite -->

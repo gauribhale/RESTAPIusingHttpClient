@@ -1,0 +1,11 @@
+package com.qa.client;
+
+public class RESTClient {
+	
+	//1. GET METHOD
+	public void get(String url) {
+		
+	}
+	
+
+}

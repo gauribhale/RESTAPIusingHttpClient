@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="APIAutomation" duration-ms="17252" started-at="2020-10-02T12:16:50 IST" finished-at="2020-10-02T12:17:08 IST">
+    <groups>
+    </groups>
+    <test name="APIAutomation Test" duration-ms="17252" started-at="2020-10-02T12:16:50 IST" finished-at="2020-10-02T12:17:08 IST">
+      <class name="com.qa.tests.POSTAPITest">
+        <test-method status="PASS" signature="testPOSTMethod()[pri:0, instance:com.qa.tests.POSTAPITest@7f13d6e]" name="testPOSTMethod" duration-ms="2184" started-at="2020-10-02T12:17:04 IST" finished-at="2020-10-02T12:17:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPOSTMethod -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.tests.POSTAPITest@7f13d6e]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-02T12:17:04 IST" finished-at="2020-10-02T12:17:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+      </class> <!-- com.qa.tests.POSTAPITest -->
+      <class name="com.qa.tests.GETAPITest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.tests.GETAPITest@71bbf57e]" name="setUp" is-config="true" duration-ms="63" started-at="2020-10-02T12:16:52 IST" finished-at="2020-10-02T12:16:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGETMethod()[pri:0, instance:com.qa.tests.GETAPITest@71bbf57e]" name="testGETMethod" duration-ms="11175" started-at="2020-10-02T12:16:52 IST" finished-at="2020-10-02T12:17:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGETMethod -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.tests.GETAPITest@71bbf57e]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-02T12:17:04 IST" finished-at="2020-10-02T12:17:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGETMethodWithHeaders()[pri:0, instance:com.qa.tests.GETAPITest@71bbf57e]" name="testGETMethodWithHeaders" duration-ms="893" started-at="2020-10-02T12:17:04 IST" finished-at="2020-10-02T12:17:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGETMethodWithHeaders -->
+      </class> <!-- com.qa.tests.GETAPITest -->
+      <class name="com.qa.tests.PUTAPITest">
+        <test-method status="PASS" signature="testPUTMethod()[pri:0, instance:com.qa.tests.PUTAPITest@51cdd8a]" name="testPUTMethod" duration-ms="905" started-at="2020-10-02T12:17:07 IST" finished-at="2020-10-02T12:17:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPUTMethod -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.tests.PUTAPITest@51cdd8a]" name="setUp" is-config="true" duration-ms="0" started-at="2020-10-02T12:17:07 IST" finished-at="2020-10-02T12:17:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+      </class> <!-- com.qa.tests.PUTAPITest -->
+    </test> <!-- APIAutomation Test -->
+  </suite> <!-- APIAutomation -->
+</testng-results>

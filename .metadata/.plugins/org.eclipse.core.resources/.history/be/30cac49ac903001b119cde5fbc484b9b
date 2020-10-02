@@ -1,0 +1,58 @@
+package com.qa.client;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.http.Header;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONObject;
+
+public class RESTClient {
+
+	// 1. GET METHOD WITHOUT HEADERS
+	public CloseableHttpResponse get(String url) throws ClientProtocolException, IOException {
+		// create simple client connection with default configuration
+		CloseableHttpClient httpClient = HttpClients.createDefault();
+		// create http get connection
+		HttpGet httpGet = new HttpGet(url);
+		// to execute the request (like hit url)
+		CloseableHttpResponse httpResponse = httpClient.execute(httpGet);
+
+		return httpResponse;
+
+	}
+
+	// 2. GET METHOD WITH HEADERS
+	public CloseableHttpResponse get(String url, HashMap<String, String> headermap)
+			throws ClientProtocolException, IOException {
+		// create simple client connection
+		CloseableHttpClient httpClient = HttpClients.createDefault();
+		// create http get connection
+		HttpGet httpGet = new HttpGet(url);
+		// to add headers in http get connection
+		for (Map.Entry<String, String> entry : headermap.entrySet()) {
+			httpGet.addHeader(entry.getKey(), entry.getValue());
+		}
+
+		// to execute the request (like hit url)
+		CloseableHttpResponse httpResponse = httpClient.execute(httpGet);
+
+		return httpResponse;
+
+	}
+	
+	public void post(String url,String entityString,HashMap<String,String> headerMap) {
+		CloseableHttpClient httpClient=HttpClients.createDefault();
+		HttpPost httpPost=new HttpPost(url);
+		
+	
+	
+	}
+}
