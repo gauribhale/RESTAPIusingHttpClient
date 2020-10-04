@@ -34,7 +34,7 @@ public class PUTAPITest extends TestBase {
 		apiUrl=prop.getProperty("putURL");		
 	}
 	
-	@Test
+	@Test(priority = 3)
 	public void testPUTMethod() throws JsonGenerationException, JsonMappingException, IOException {
 		System.out.println("-------PUT METHOD TEST-------");
 		client=new RESTClient();

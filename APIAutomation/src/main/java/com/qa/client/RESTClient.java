@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
@@ -78,6 +79,20 @@ public class RESTClient {
 		}
 		CloseableHttpResponse httpResponse = httpClient.execute(httpPut);
 
+		return httpResponse;
+	}
+	
+	//5. DELETE METHOD
+	public CloseableHttpResponse delete(String url, HashMap<String,String> headerMap) throws ClientProtocolException, IOException {
+		CloseableHttpClient httpClient=HttpClients.createDefault();
+		HttpDelete httpDelete =new HttpDelete(url);
+		
+		//add headers
+		for(Map.Entry<String, String> entry:headerMap.entrySet()) {
+			httpDelete.addHeader(entry.getKey(),entry.getValue());
+		}
+		
+		CloseableHttpResponse httpResponse=httpClient.execute(httpDelete);
 		return httpResponse;
 	}
 }

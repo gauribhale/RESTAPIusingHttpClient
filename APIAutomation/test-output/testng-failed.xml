@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.tests.POSTAPITest">
+      <class name="com.qa.tests.DELETEAPITest">
         <methods>
-          <include name="testPOSTMethod"/>
+          <include name="testDELETEMethod"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.qa.tests.POSTAPITest -->
+      </class> <!-- com.qa.tests.DELETEAPITest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

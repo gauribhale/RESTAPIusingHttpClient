@@ -33,7 +33,7 @@ public class GETAPITest extends TestBase {
 
 	}
 
-	@Test
+	@Test(priority = 1)
 	public void testGETMethod() throws ClientProtocolException, IOException {
 		client = new RESTClient();
 		httpResponse = client.get(url + apiUrl);

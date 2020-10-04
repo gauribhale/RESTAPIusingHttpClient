@@ -12,6 +12,7 @@ public class TestBase {
 	public int RESPONSE_CODE_400 = 400;
 	public int RESPONSE_CODE_201 = 201;
 	public int RESPONSE_CODE_401 = 401;
+	public int RESPONSE_CODE_204 = 204;
 
 	public Properties prop;
 

@@ -36,7 +36,7 @@ public class POSTAPITest extends TestBase {
 
 	}
 
-	@Test
+	@Test(priority = 2)
 	public void testPOSTMethod() throws JsonGenerationException, JsonMappingException, IOException {
 	
 		System.out.println("-------POST METHOD TEST---------");

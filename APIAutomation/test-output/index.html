@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,6 +102,11 @@
                       <a href="#" panel-name="suite-APIAutomation" class="show-methods passed suite-APIAutomation"> (show)</a> <!-- show-methods passed suite-APIAutomation -->
                     </span>
                     <div class="method-list-content passed suite-APIAutomation">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-APIAutomation" title="com.qa.tests.DELETEAPITest" hash-for-method="testDELETEMethod">testDELETEMethod</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-APIAutomation" title="com.qa.tests.GETAPITest" hash-for-method="testGETMethod">testGETMethod</a> <!-- method navigator-link -->
@@ -137,14 +142,14 @@
           <div class="suite-APIAutomation-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.qa.tests.POSTAPITest</span>
+              <span class="class-name">com.qa.tests.PUTAPITest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testPOSTMethod">
-                  </a> <!-- testPOSTMethod -->
-                  <span class="method-name">testPOSTMethod</span>
+                  <a name="testPUTMethod">
+                  </a> <!-- testPUTMethod -->
+                  <span class="method-name">testPUTMethod</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -174,14 +179,29 @@
           <div class="suite-APIAutomation-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.qa.tests.PUTAPITest</span>
+              <span class="class-name">com.qa.tests.DELETEAPITest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testPUTMethod">
-                  </a> <!-- testPUTMethod -->
-                  <span class="method-name">testPUTMethod</span>
+                  <a name="testDELETEMethod">
+                  </a> <!-- testDELETEMethod -->
+                  <span class="method-name">testDELETEMethod</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-APIAutomation-class-passed -->
+          <div class="suite-APIAutomation-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.tests.POSTAPITest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPOSTMethod">
+                  </a> <!-- testPOSTMethod -->
+                  <span class="method-name">testPOSTMethod</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -201,6 +221,7 @@
       &lt;package name=&quot;com.qa.tests&quot;/&gt;
     &lt;/packages&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;com.qa.tests.DELETEAPITest&quot;/&gt;
       &lt;class name=&quot;com.qa.tests.GETAPITest&quot;/&gt;
       &lt;class name=&quot;com.qa.tests.POSTAPITest&quot;/&gt;
       &lt;class name=&quot;com.qa.tests.PUTAPITest&quot;/&gt;
@@ -217,7 +238,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">APIAutomation Test (3 classes)</span>
+                <span class="test-name">APIAutomation Test (4 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -243,28 +264,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testGETMethod')
+data.setCell(0, 1, 'testGETMethodWithHeaders')
 data.setCell(0, 2, 'com.qa.tests.GETAPITest')
-data.setCell(0, 3, 11175);
+data.setCell(0, 3, 1360);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testPOSTMethod')
 data.setCell(1, 2, 'com.qa.tests.POSTAPITest')
-data.setCell(1, 3, 2184);
+data.setCell(1, 3, 1025);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testPUTMethod')
 data.setCell(2, 2, 'com.qa.tests.PUTAPITest')
-data.setCell(2, 3, 905);
+data.setCell(2, 3, 516);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testGETMethodWithHeaders')
-data.setCell(3, 2, 'com.qa.tests.GETAPITest')
-data.setCell(3, 3, 893);
+data.setCell(3, 1, 'testDELETEMethod')
+data.setCell(3, 2, 'com.qa.tests.DELETEAPITest')
+data.setCell(3, 3, 468);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testGETMethod')
+data.setCell(4, 2, 'com.qa.tests.GETAPITest')
+data.setCell(4, 3, 453);
 window.suiteTableData['APIAutomation']= { tableData: data, tableDiv: 'times-div-APIAutomation'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-APIAutomation">
               </div> <!-- times-div-APIAutomation -->
             </div> <!-- times-div -->
@@ -296,38 +321,49 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testGETMethod</span>
-                <span class="method-start">63 ms</span>
+                <span class="method-name">testGETMethodWithHeaders</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">11254 ms</span>
+                <span class="method-start">1360 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testGETMethodWithHeaders</span>
-                <span class="method-start">11254 ms</span>
+                <span class="method-name">testGETMethod</span>
+                <span class="method-start">1360 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.tests.POSTAPITest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">12147 ms</span>
+                <span class="method-start">1813 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testPOSTMethod</span>
-                <span class="method-start">12147 ms</span>
+                <span class="method-start">1813 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.tests.PUTAPITest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">14331 ms</span>
+                <span class="method-start">2838 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testPUTMethod</span>
-                <span class="method-start">14331 ms</span>
+                <span class="method-start">2838 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.tests.DELETEAPITest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">3354 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testDELETEMethod</span>
+                <span class="method-start">3370 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
